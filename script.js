@@ -70,7 +70,7 @@ const account3 = {
     nameAccount: 'Aluguel',
     priceAccount: 700,
     isPaid: false,
-    paymentDate: ['23/01/2022','00/00/0000']
+    paymentDate: ['23/01/2022']
 }
 
 // // Adicionando os objetos em um array.
@@ -134,22 +134,20 @@ if (account3.isPaid) {
 
 console.log('RELATÓRIO DE CONTAS PAGAS')
 for (let i in arrayObjectAccountsPaids) {
-    let arrayStringPaids = (`Conta ${i+1}: 
+    let arrayStringPaids = (`Conta ${Number(i)+1}: 
     Nome: ${arrayObjectAccountsPaids[i].nameAccount.toUpperCase()}
     Valor: R$ ${arrayObjectAccountsPaids[i].priceAccount}
     Data Vencimento: ${arrayObjectAccountsPaids[i].paymentDate[i]}
-    Data Pagamento: ${arrayObjectAccountsPaids[i].paymentDate[i+1]}`)
-    
+    Data Pagamento: ${arrayObjectAccountsPaids[i].paymentDate[1]}`)   
     console.log(arrayStringPaids);
 }
 
 console.log('RELATÓRIO DE CONTAS NÃO PAGAS')
-for (let i in arrayStringNotPaids) {
-    let arrayStringNotPaids = (`Conta ${i+1}: 
+for (let i in arrayObjectAccountsNotPaids) {
+    let arrayStringNotPaids = (`Conta ${Number(i)+1}: 
     Nome: ${arrayObjectAccountsNotPaids[i].nameAccount.toUpperCase()}
     Valor: R$ ${arrayObjectAccountsNotPaids[i].priceAccount}
     Data Vencimento: ${arrayObjectAccountsNotPaids[i].paymentDate[i]}
-    Data Pagamento: ${arrayObjectAccountsNotPaids[i].paymentDate[i+1]}`)
-
+    Data Pagamento: ${arrayObjectAccountsNotPaids[i].paymentDate[1]}`)
     console.log(arrayStringNotPaids);
 }
