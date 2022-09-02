@@ -1,7 +1,6 @@
 // **PROJETO WEB - CONTAS**
 
 // --------------------- SEMANA 1 - CADASTRO DE CONTAS
-
 // // Variáveis iniciais.
 // const nameAccount1 = "Gasolina";
 // const priceAccount1 = 150;
@@ -52,7 +51,6 @@
 // Vencimento/Pagamento: ${date3}`);
 
 // --------------------- SEMANA 3 - CADASTRO DE CONTAS
-
 // Transformando em objetos.
 const account1 = {
     nameAccount: 'Cartão',
@@ -78,7 +76,6 @@ const account3 = {
     image: '',
     report: ['']
 }
-
 const account4 = {
     nameAccount: 'Aluguel',
     priceAccount: 700,
@@ -88,7 +85,6 @@ const account4 = {
     report: ['']
 }
 
-
 // // Adicionando os objetos em um array.
 // const arrayObject = [];
 // arrayObject.push({ account1 });
@@ -97,7 +93,6 @@ const account4 = {
 // console.log(arrayObject);
 
 // --------------------- SEMANA 4 - CADASTRO DE CONTAS
-
 // Adicionando os objetos em um array pela condicional.
 const arrayObjectAccountsPaids = [];
 const arrayObjectAccountsNotPaids = [];
@@ -139,8 +134,7 @@ if (account4.isPaid) {
 //     Nome: ${arrayObjectAccountsPaids[i].nameAccount.toUpperCase()}
 //     Valor: R$ ${arrayObjectAccountsPaids[i].priceAccount}
 //     Data Vencimento: ${arrayObjectAccountsPaids[i].paymentDate[i]}
-//     Data Pagamento: ${arrayObjectAccountsPaids[i].paymentDate[i+1]}`)
-    
+//     Data Pagamento: ${arrayObjectAccountsPaids[i].paymentDate[i+1]}`)   
 //     console.log(arrayStringPaids);
 // }
 
@@ -151,7 +145,6 @@ if (account4.isPaid) {
 //     Valor: R$ ${arrayObjectAccountsNotPaids[i].priceAccount}
 //     Data Vencimento: ${arrayObjectAccountsNotPaids[i].paymentDate[i]}
 //     Data Pagamento: ${arrayObjectAccountsNotPaids[i].paymentDate[i+1]}`)
-
 //     console.log(arrayStringNotPaids);
 // }
 
