@@ -55,23 +55,39 @@
 
 // Transformando em objetos.
 const account1 = {
-    nameAccount: 'Gasolina',
+    nameAccount: 'Cartão',
     priceAccount: 150,
     isPaid: true,
-    paymentDate: ['20/05/2022', '19/05/2022'] // Primeira data é vencimento, segunda é pagamento.
+    paymentDate: ['20/05/2022', '19/05/2022'], // Primeira data é vencimento, segunda é pagamento.
+    image: '',
+    report: ['']
 }
 const account2 = {
     nameAccount: 'Internet',
-    priceAccount: 70,
+    priceAccount: 100,
     isPaid: true,
-    paymentDate: ['17/03/2022', '14/03/2022']
+    paymentDate: ['17/03/2022', '14/03/2022'],
+    image: '',
+    report: ['']
 }
 const account3 = {
     nameAccount: 'Aluguel',
     priceAccount: 700,
     isPaid: false,
-    paymentDate: ['23/01/2022']
+    paymentDate: ['23/01/2022'],
+    image: '',
+    report: ['']
 }
+
+const account4 = {
+    nameAccount: 'Aluguel',
+    priceAccount: 700,
+    isPaid: false,
+    paymentDate: ['23/01/2022'],
+    image: '',
+    report: ['']
+}
+
 
 // // Adicionando os objetos em um array.
 // const arrayObject = [];
@@ -107,6 +123,13 @@ if (account3.isPaid) {
     alert(`Atenção! A conta ${account3.nameAccount} não foi paga`);
 }
 
+if (account4.isPaid) {
+    arrayObjectAccountsPaids.push(account4);
+} else {
+    arrayObjectAccountsNotPaids.push(account4);
+    alert(`Atenção! A conta ${account4.nameAccount} não foi paga`);
+}
+
 // console.log(arrayObjectAccountsPaids);
 
 // --------------------- SEMANA 5 - CADASTRO DE CONTAS
@@ -132,22 +155,50 @@ if (account3.isPaid) {
 //     console.log(arrayStringNotPaids);
 // }
 
-console.log('RELATÓRIO DE CONTAS PAGAS')
+// console.log('RELATÓRIO DE CONTAS PAGAS')
 for (let i in arrayObjectAccountsPaids) {
-    let arrayStringPaids = (`Conta ${Number(i)+1}: 
+    arrayObjectAccountsPaids[i].report = (`Conta ${Number(i)+1}: 
     Nome: ${arrayObjectAccountsPaids[i].nameAccount.toUpperCase()}
     Valor: R$ ${arrayObjectAccountsPaids[i].priceAccount}
-    Data Vencimento: ${arrayObjectAccountsPaids[i].paymentDate[i]}
+    Data Vencimento: ${arrayObjectAccountsPaids[i].paymentDate[0]}
     Data Pagamento: ${arrayObjectAccountsPaids[i].paymentDate[1]}`)   
-    console.log(arrayStringPaids);
+    // console.log(arrayObjectAccountsPaids[i].report);
 }
 
-console.log('RELATÓRIO DE CONTAS NÃO PAGAS')
+// console.log('RELATÓRIO DE CONTAS NÃO PAGAS')
 for (let i in arrayObjectAccountsNotPaids) {
-    let arrayStringNotPaids = (`Conta ${Number(i)+1}: 
+    arrayObjectAccountsNotPaids[i].report = (`Conta ${Number(i)+1}: 
     Nome: ${arrayObjectAccountsNotPaids[i].nameAccount.toUpperCase()}
     Valor: R$ ${arrayObjectAccountsNotPaids[i].priceAccount}
-    Data Vencimento: ${arrayObjectAccountsNotPaids[i].paymentDate[i]}
+    Data Vencimento: ${arrayObjectAccountsNotPaids[i].paymentDate[0]}
     Data Pagamento: ${arrayObjectAccountsNotPaids[i].paymentDate[1]}`)
-    console.log(arrayStringNotPaids);
+    // console.log(arrayObjectAccountsNotPaids[i].report);
 }
+
+// --------------------- SEMANA 6 - CADASTRO DE CONTAS
+const objReports = (obj)=>{
+    return obj.report
+}
+console.log(objReports(account3));
+
+const objReturn = (arrayObj, arrayObj2, string)=>{
+    let obj = []
+    for(let i in arrayObj){  
+        if(arrayObj[i].nameAccount.toUpperCase() === string){
+            obj.push(arrayObj[i])
+        }
+    }
+    for(let i in arrayObj2){  
+        if(arrayObj2[i].nameAccount.toUpperCase() === string){
+            obj.push(arrayObj2[i])
+        }
+    }
+    if(obj.length > 0){
+        return obj
+    } else {
+        return alert('Item não encontrado!')
+    }
+}
+
+let stringFilter = 'aluguel'
+console.log(objReturn(arrayObjectAccountsPaids, arrayObjectAccountsNotPaids, stringFilter.toUpperCase()));
