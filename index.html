@@ -2,61 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Accounts</title>
     <link rel="stylesheet" type=text/css href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Projeto Web - <project>Online Accounts</project></h1>
+    <aside class="aside-bar">
+        <a href="#"><img src="./media/aplicativos.png" alt="icone menu"></a>
+        <a href="#"><img src="./media/do-utilizador.png" alt="icone perfil"></a>
+        <a href="#"><img src="./media/documento.png" alt="icone contas"></a>
+        <a href="mailto:m.contatomellissamorette@gmail.com" target="_blank"><img src="./media/envelope.png" alt="icone email"></a>
+        <a href="https://www.linkedin.com/in/mellissa-morette/" target="_blank"><img src="./media/linkedin.png" alt="icone linkedin"></a>
+        <a href="https://github.com/melmorette" target="_blank"><img src="media/github.png" alt="icone github"></a>
+    </aside>
+
+    <header class="header-page">
+        <section class="line-1">
+            <img src="./media/logo.png" alt="logo">
+        </section>
     </header>
-    <main>
-        <div class="filter">
-            <input type="text" placeholder="Pesquisar por nome"/>
-            <button>Pesquisar</button>
-        </div>
-        <div class="itens">
-            <section>
-                <h3>Contas Pagas</h3>
-                <section>
-                    <ul>
-                        <img src="../media/cartao-de-credito-facil-aprovar-negativado.jpg" alt="Imagem de Cartões de Crédito">
-                        <li>Nome da Conta: <a href="https://www.conseg.com.br/blog/6-dicas-para-economizar-na-fatura-do-cartao-de-credito">Cartão</a></li>
-                        <li>Valor: R$ 150</li>
-                        <li>Data de Vencimento: 20/05/2022</li>
-                        <li>Data de Pagamento: 19/05/2022</li>
-                    </ul>
-                </section>
-                <section>
-                    <ul>
-                        <img src="../media/cartao-de-credito-facil-aprovar-negativado.jpg" alt="Imagem de Cartões de Crédito">
-                        <li>Nome da Conta: <a href="https://www.bancopan.com.br/blog/publicacoes/como-economizar-dinheiro-contas-reduzidas-de-tv-e-internet.htm">Internet</a></li>
-                        <li>Valor: R$ 100</li>
-                        <li>Data de Vencimento: 17/03/2022</li>
-                        <li>Data de Pagamento: 14/03/2022</li>
-                    </ul>
-                </section>
-            </section>
-            <section>
-                <h3>Contas Não Pagas</h3>
-                <section>
-                    <ul>
-                        <img src="../media/cartao-de-credito-facil-aprovar-negativado.jpg" alt="Imagem de Cartões de Crédito">
-                        <li>Nome da Conta: <a href="https://jurosbaixos.com.br/conteudo/10-dicas-eficientes-para-economizar-com-aluguel/">Aluguel</a></li>
-                        <li>Valor: R$ 700</li>
-                        <li>Data de Vencimento: 23/01/2022</li>
-                    </ul>
-                </section>
-            </section>
-        </div>
+
+    <main class="main-page">
+        <section class="main-head">
+            <h2>Relatório de Contas</h2>
+            <button class="more-account">+ Adicionar Conta</button>
+        </section>
+        <section class="filter">
+            <input type="text" id="search-txt" placeholder="Pesquisar 🔎">
+            <button onclick="searchAccount()" type="submit">Buscar</button>
+        </section>
+        <section class="painel-itens">
+            <section id="account-not-paids"></section>
+            <section id="account-paids"></section>
+        </section>
     </main>
-    <footer>
-        <p>Dev: Mellissa Morette | Github: <a href="https://github.com/MelMorette">MelMorette</a></p>
-    </footer>       
+
+    <footer class="footer-page">
+        <p>Criado com 🧡 na Labenu</p>
+        <p>por Mellissa</p>
+    </footer>
 </body>
 
 </html>
