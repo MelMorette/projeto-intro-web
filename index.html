@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Accounts</title>
+    <link rel="stylesheet" type=text/css href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <aside class="aside-bar">
+        <a href="#"><img src="./media/aplicativos.png" alt="icone menu"></a>
+        <a href="#"><img src="./media/do-utilizador.png" alt="icone perfil"></a>
+        <a href="#"><img src="./media/documento.png" alt="icone contas"></a>
+        <a href="mailto:m.contatomellissamorette@gmail.com" target="_blank"><img src="./media/envelope.png" alt="icone email"></a>
+        <a href="https://www.linkedin.com/in/mellissa-morette/" target="_blank"><img src="./media/linkedin.png" alt="icone linkedin"></a>
+        <a href="https://github.com/melmorette" target="_blank"><img src="media/github.png" alt="icone github"></a>
+    </aside>
+
+    <header class="header-page">
+        <section class="line-1">
+            <img src="./media/logo.png" alt="logo">
+        </section>
+    </header>
+
+    <main class="main-page">
+        <section class="main-head">
+            <h2>Relatório de Contas</h2>
+            <button class="more-account">+ Adicionar Conta</button>
+        </section>
+        <section class="filter">
+            <input type="text" id="search-txt" placeholder="Pesquisar 🔎">
+            <button onclick="searchAccount()" type="submit">Buscar</button>
+        </section>
+        <section class="painel-itens">
+            <section id="account-not-paids"></section>
+            <section id="account-paids"></section>
+        </section>
+    </main>
+
+    <footer class="footer-page">
+        <p>Criado com 🧡 na Labenu</p>
+        <p>por Mellissa</p>
+    </footer>
+</body>
+
+</html>
